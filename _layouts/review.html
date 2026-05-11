@@ -5,6 +5,9 @@
     <title>{{ page.show_title | default: page.title }} — Zhangsihao Yang</title>
     <meta name="author" content="Zhangsihao Yang">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="/stylesheet.css">
   </head>
   <body>
@@ -28,15 +31,11 @@
 
           <hr style="margin:48px 0 24px 0;border:none;border-top:1px solid #eee;">
 
-          <h2>Comments</h2>
-          <div id="cusdis_thread"
-            data-host="https://cusdis.com"
-            data-app-id="CUSDIS_APP_ID_PLACEHOLDER"
-            data-page-id="{{ page.url }}"
-            data-page-url="{{ site.url }}{{ page.url }}"
-            data-page-title="{{ page.show_title | default: page.title }}">
-          </div>
-          <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+          <div id="comments"></div>
+          <script src="/assets/comments.js"></script>
+          <script>
+            ZshyangComments.mount("#comments", "{{ page.url }}");
+          </script>
 
           <br>
           <p style="text-align:right;font-size:small;color:#aaa;">

@@ -105,7 +105,7 @@
     container.appendChild(list);
 
     const form = ce("div", { class: "comment-form" });
-    const ta = ce("textarea", { class: "comment-input", rows: "4", maxlength: "1000", placeholder: "写点什么吧…（匿名，会随机署名一位哲学家）" });
+    const ta = ce("textarea", { class: "comment-input", rows: "4", maxlength: "1000", placeholder: "写点什么吧…" });
     const submit = ce("button", { class: "comment-submit", type: "button", text: "留言" });
     form.appendChild(ta);
     form.appendChild(submit);

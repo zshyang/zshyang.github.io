@@ -1,0 +1,24 @@
+title: Zhangsihao Yang
+description: Personal homepage of Zhangsihao Yang
+
+collections:
+  reviews:
+    output: true
+    permalink: /reviews/:path/
+
+defaults:
+  - scope:
+      type: reviews
+    values:
+      layout: review
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

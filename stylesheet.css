@@ -133,3 +133,98 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.motto {
+  font-family: 'Lato', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Verdana, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+.motto .quote-zh {
+  margin: 10px 0 2px 0;
+  font-size: 14px;
+}
+
+.motto .quote-en {
+  margin: 0 0 10px 0;
+  color: #888;
+  font-style: italic;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.motto .quote-attr {
+  text-align: right;
+  color: #888;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+h1.review-title {
+  font-family: 'Lato', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Verdana, Helvetica, sans-serif;
+  font-size: 28px;
+  margin: 20px 0 4px 0;
+  font-weight: 700;
+}
+
+.review-meta {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+
+.review-content {
+  font-family: 'Lato', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.review-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.review-content h2,
+.review-content h3 {
+  margin-top: 28px;
+}
+
+.review-content blockquote {
+  border-left: 3px solid #ddd;
+  padding-left: 14px;
+  color: #555;
+  margin: 14px 0;
+}
+
+.review-list-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.review-list-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.review-list-date {
+  color: #888;
+  font-size: 13px;
+  margin-left: 10px;
+}
+
+.review-list-rating {
+  color: #f09228;
+  font-size: 13px;
+  margin-left: 8px;
+}
+
+.review-list-summary {
+  color: #555;
+  font-size: 14px;
+  margin: 6px 0 0 0;
+}
+
+.nav-back {
+  font-size: 13px;
+  color: #888;
+}

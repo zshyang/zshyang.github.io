@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ page.show_title | default: page.title }} — Zhangsihao Yang</title>
+    <meta name="author" content="Zhangsihao Yang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  </head>
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:2.5%">
+          <p class="nav-back"><a href="/">← Home</a> &nbsp;/&nbsp; <a href="/reviews/">All Reviews</a></p>
+
+          <h1 class="review-title">{{ page.show_title | default: page.title }}</h1>
+          <p class="review-meta">
+            {{ page.date | date: "%Y-%m-%d" }}{% if page.rating %} &middot; {{ page.rating }}/5{% endif %}{% if page.director %} &middot; 导演：{{ page.director }}{% endif %}
+          </p>
+
+          {% if page.poster %}
+          <p><img src="{{ page.poster }}" alt="{{ page.show_title | default: page.title }}" style="max-width:320px;display:block;margin:0 auto 24px auto;"></p>
+          {% endif %}
+
+          <div class="review-content">
+            {{ content }}
+          </div>
+
+          <hr style="margin:48px 0 24px 0;border:none;border-top:1px solid #eee;">
+
+          <h2>Comments</h2>
+          <div id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="CUSDIS_APP_ID_PLACEHOLDER"
+            data-page-id="{{ page.url }}"
+            data-page-url="{{ site.url }}{{ page.url }}"
+            data-page-title="{{ page.show_title | default: page.title }}">
+          </div>
+          <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+
+          <br>
+          <p style="text-align:right;font-size:small;color:#aaa;">
+            <a href="/">Zhangsihao Yang</a>
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /reviews/
+---
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Reviews — Zhangsihao Yang</title>
+    <meta name="author" content="Zhangsihao Yang">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+  </head>
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:2.5%">
+          <p class="nav-back"><a href="/">← Home</a></p>
+          <h1 class="review-title">Reviews</h1>
+          <p class="review-meta">影评 / 随笔</p>
+
+          {% assign sorted_reviews = site.reviews | sort: 'date' | reverse %}
+          {% for review in sorted_reviews %}
+            <div class="review-list-item">
+              <a href="{{ review.url }}" class="review-list-title">{{ review.show_title | default: review.title }}</a>
+              <span class="review-list-date">{{ review.date | date: "%Y-%m-%d" }}</span>
+              {% if review.rating %}<span class="review-list-rating">★ {{ review.rating }}/5</span>{% endif %}
+              {% if review.summary %}<p class="review-list-summary">{{ review.summary }}</p>{% endif %}
+            </div>
+          {% endfor %}
+
+          {% if sorted_reviews.size == 0 %}
+            <p style="color:#888;margin-top:24px;">还没有影评。敬请期待。</p>
+          {% endif %}
+        </td>
+      </tr>
+    </tbody></table>
+  </body>
+</html>
